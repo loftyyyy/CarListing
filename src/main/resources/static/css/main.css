@@ -1,0 +1,35 @@
+/* src/main/resources/static/css/styles.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.site-header {
+    align-content: center ;
+    background-color: #333;
+    color: #fff;
+}
+
+.site-header .container {
+    width: 100%;
+    /*max-width: 1500px;*/
+    display: flex;
+}
+
+.container .logo {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+
+}
+
+.container .nav-links {
+    display:flex;
+    list-style: none;
+    margin-left: auto; >> ito ang problema
+}
+
+.container .nav-links li {
+    margin-right: 20px;
+}
+
