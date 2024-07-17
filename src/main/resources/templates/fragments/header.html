@@ -3,12 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{static/hStyle.css}">
     <title>Document</title>
 </head>
 <body>
 
-    <div th:fragment="headerFragment">
-        <p>Header Fragment</p>
+    <div th:fragment="headerFragment" class="header-div">
+        <header>
+            <img src="" alt="">
+            <nav class="nav-bar">
+                <ul>
+                    <li>Home</li>
+                    <li>Habadu</li>
+                    <li>Hedu</li>
+                    <li>Pokemon</li>
+                </ul>
+            </nav>
+        </header>
 
     </div>
     
