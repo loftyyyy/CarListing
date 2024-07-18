@@ -1,37 +1,60 @@
-/* src/main/resources/static/css/styles.css */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
 
 .site-header {
-    align-content: center ;
     background-color: #333;
     color: #fff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .site-header .container {
     width: 100%;
-    /*max-width: 1500px;*/
-    display: flex;
-}
-
-.container .logo {
-    margin-left: 20px;
+    max-width: 1200px;
     display: flex;
     align-items: center;
-
+    padding: 0 20px;
 }
 
-.container .nav-links {
-    display:flex;
+.site-header .logo {
+    display: flex;
+    align-items: center;
+    margin-right: auto; /* Ensures the logo stays on the left */
+}
+
+.site-header nav {
+    margin-left: auto; /* Pushes the nav to the far right */
+}
+
+.site-header .nav-links {
     list-style: none;
-    margin-left: auto;
-    /*text-decoration: none;*/
+    display: flex;
+    margin: 0;
+    padding: 0;
 }
 
-.container .nav-links li {
-    margin-right: 20px;
+.site-header .nav-links li {
+    margin-left: 10px; /* Adjusts the spacing between each nav item */
 }
 
+.site-header .nav-links a {
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.site-header .nav-links a:hover {
+    border-radius: 3px;
+    background-color: blue;
+}
+
+.site-header .container .logo span {
+
+    font-weight: bold;
+}
 
