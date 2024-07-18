@@ -23,11 +23,11 @@
             </div>
             <nav>
                 <ul class="nav-links">
-                    <li><a th:href="@{/}">Home</a></li>
-                    <li><a th:href="@{/browse}">Browse Cars</a></li>
-                    <li><a th:href="@{/sell}">Sell Your Car</a></li>
-                    <li><a th:href="@{/about}">About Us</a></li>
-                    <li><a th:href="@{/contact}">Contact</a></li>
+                    <li><a th:href="@{/}" th:classappend="${currentPage == 'index'} ? 'active' : ''">Home</a></li>
+                    <li><a th:href="@{/browse}" th:classappend="${currentPage == 'browse'} ? 'active' : ''">Browse Cars</a></li>
+                    <li><a th:href="@{/sell}" th:classappend="${currentPage == 'sell'} ? 'active' : ''">Sell Your Car</a></li>
+                    <li><a th:href="@{/about}" th:classappend="${currentPage == 'about'} ? 'active' : ''">About Us</a></li>
+                    <li><a th:href="@{/contact}" th:classappend="${currentPage == 'contact'} ? 'active' : ''">Contact</a></li>
                 </ul>
             </nav>
         </div>
