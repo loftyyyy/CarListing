@@ -26,10 +26,12 @@ body {
 .container .nav-links {
     display:flex;
     list-style: none;
-    margin-left: auto; >> ito ang problema
+    margin-left: auto;
+    /*text-decoration: none;*/
 }
 
 .container .nav-links li {
     margin-right: 20px;
 }
+
 

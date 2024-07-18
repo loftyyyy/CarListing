@@ -13,4 +13,5 @@ public class CarController {
         return "index";
     }
 
+    //TODO: Make the header responsive, put a marker to know which page th euser is
 }
