@@ -45,12 +45,13 @@ body {
     padding: 10px;
     color: #fff;
     text-decoration: none;
-    font-weight: bold;
+    /*font-weight: bold;*/
 }
 
 .site-header .nav-links a:hover {
     border-radius: 3px;
-    background-color: blue;
+    background-color: dodgerblue;
+
 }
 
 .site-header .container .logo span {
@@ -58,3 +59,8 @@ body {
     font-weight: bold;
 }
 
+.site-header .container .nav-links li a.active {
+    border-radius: 3px;
+    background-color:dodgerblue;
+
+}

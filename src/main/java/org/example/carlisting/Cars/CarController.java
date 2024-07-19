@@ -1,6 +1,6 @@
 package org.example.carlisting.Cars;
 
-import ch.qos.logback.core.model.Model;
+import org.springframework.ui.Model;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -11,27 +11,33 @@ public class CarController {
 
     @GetMapping("/")
     public String home(Model model){
+        model.addAttribute("currentPage", "index");
 
         return "index";
     }
 
     @GetMapping("/browse")
     public String browse(Model model){
+        model.addAttribute("currentPage", "browse");
+
         return "browse";
     }
 
     @GetMapping("/sell")
     public String sell(Model model){
+        model.addAttribute("currentPage", "sell");
         return "sell";
     }
 
     @GetMapping("/about")
     public String about(Model model){
+        model.addAttribute("currentPage", "about");
         return "about";
     }
 
     @GetMapping("/contact")
     public String contact(Model model){
+        model.addAttribute("currentPage", "contact");
         return "contact";
     }
 
