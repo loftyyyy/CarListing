@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" th:href="@{/css/main.css}">
+    <link rel="stylesheet" th:href="@{/css/styleFooter.css}">
     <link rel="stylesheet" th:href="@{/css/styleSell.css}">
 
     <title>Car Listing</title>
@@ -25,42 +26,44 @@
 
                 <div class="form-group">
                     <label for="year">Year</label>
-                    <input type="text" name="year" id="year" placeholder="2023">
+                    <input type="text" name="year" id="year" placeholder="2023" required>
 
                 </div>
                 <div class="form-group">
 
                     <label for="registration">Registration</label>
-                    <input type="text" name="registration" id="registration" placeholder="ABC 123">
+                    <input type="text" name="registration" id="registration" placeholder="ABC 123" required>
 
                 </div>
 
                 <div class="form-group">
                     <label for="price">Price</label>
-                    <input type="text" name="price" id="price" placeholder="$25,000">
+                    <input type="text" name="price" id="price" placeholder="$25,000" required>
 
                 </div>
                 <div class="form-group">
                     <label for="brand">Brand</label>
-                    <input type="text" name="brand" id="brand" placeholder="Toyota">
+                    <input type="text" name="brand" id="brand" placeholder="Toyota" required>
 
                 </div>
                 <div class="form-group">
                     <label for="model">Model</label>
-                    <input type="text" name="model" id="model" placeholder="Camry">
+                    <input type="text" name="model" id="model" placeholder="Camry" required>
                 </div>
                 <div class="form-group">
                     <label for="color">Color</label>
-                    <input type="text" name="color" id="color" placeholder="Silver">
+                    <input type="text" name="color" id="color" placeholder="Silver" required>
                 </div>
 
                 
                 <div class="form-group full-width">
                     <label for="description">Description</label>
-                    <textarea name="description" id="description" placeholder="Provide details about your car...."></textarea>
+                    <textarea name="description" id="description" placeholder="Provide details about your car...." required></textarea>
                 </div>
 
-                <button class="submit">List Car</button>
+                <div class="form-action">
+                    <button class="submit">List Car</button>
+                </div>
                 
             </form>
             
