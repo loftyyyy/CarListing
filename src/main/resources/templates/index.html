@@ -9,8 +9,8 @@
 </head>
 <body>
 
-    <div th:replace="fragments/header :: headerFragment" th:with="currentPage='index'"></div>
-    <div th:replace="fragments/footer :: footerFragment"></div>
+    <div th:replace="~{fragments/header :: headerFragment}" th:with="currentPage='index'"></div>
+    <div th:replace="~{fragments/footer :: footerFragment}"></div>
     
 </body>
 </html>

@@ -11,7 +11,7 @@
 <body>
 
 
-    <div th:replace="fragments/header :: headerFragment" th:with="currentPage='sell'"></div>
+    <div th:replace="~{fragments/header :: headerFragment}" th:with="currentPage='sell'"></div>
     
     <div class="listingContainer">
 
@@ -20,55 +20,56 @@
             <p>Fill out the form below to list your car for sale.</p>
         </div>
         <div class="listingForms">
-            <form>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="year">Year:</label>
-                        <input type="text" id="year" name="year" placeholder="2023">
-                    </div>
-                    <div class="form-group">
-                        <label for="registration">Registration:</label>
-                        <input type="text" id="registration" name="registration" placeholder="ABC 123">
-                    </div>
-                </div>
 
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="price">Price:</label>
-                        <input type="text" id="price" name="price" placeholder="$25,000">
-                    </div>
-                    <div class="form-group">
-                        <label for="brand">Brand:</label>
-                        <input type="text" id="brand" name="brand" placeholder="Toyota">
-                    </div>
-                </div>
+            <form action="GET">
 
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="model">Model:</label>
-                        <input type="text" id="model" name="model" placeholder="Camry">
-                    </div>
-                    <div class="form-group">
-                        <label for="color">Color:</label>
-                        <input type="text" id="color" name="color" placeholder="Silver">
-                    </div>
+                <div class="form-group">
+                    <label for="year">Year</label>
+                    <input type="text" name="year" id="year" placeholder="2023">
+
+                </div>
+                <div class="form-group">
+
+                    <label for="registration">Registration</label>
+                    <input type="text" name="registration" id="registration" placeholder="ABC 123">
+
                 </div>
 
                 <div class="form-group">
-                    <label for="description">Description:</label>
-                    <textarea id="description" name="description" placeholder="Provide details about your car..."></textarea>
+                    <label for="price">Price</label>
+                    <input type="text" name="price" id="price" placeholder="$25,000">
+
+                </div>
+                <div class="form-group">
+                    <label for="brand">Brand</label>
+                    <input type="text" name="brand" id="brand" placeholder="Toyota">
+
+                </div>
+                <div class="form-group">
+                    <label for="model">Model</label>
+                    <input type="text" name="model" id="model" placeholder="Camry">
+                </div>
+                <div class="form-group">
+                    <label for="color">Color</label>
+                    <input type="text" name="color" id="color" placeholder="Silver">
                 </div>
 
-                <button type="submit">List Car</button>
+                
+                <div class="form-group full-width">
+                    <label for="description">Description</label>
+                    <textarea name="description" id="description" placeholder="Provide details about your car...."></textarea>
+                </div>
+
+                <button class="submit">List Car</button>
+                
             </form>
-
-
+            
         </div>
 
 
     </div>
 
-    <div th:replace="fragments/footer :: footerFragment"></div>
+    <div th:replace="~{fragments/footer :: footerFragment}"></div>
 
 </body>
 </html>
