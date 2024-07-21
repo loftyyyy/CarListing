@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    display: flex; /* Enable flexbox on the body */
+    flex-direction: column; /* Stack elements vertically */
+    min-height: 100vh; /* Ensure body covers full viewport height */
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Center the main content horizontally */
+    align-items: center; /* Center the main content vertically */
+}
+
+.mainDiv {
+    display: flex;
+    width: 100%;
+    max-width: 1200px; /* Optional: set a maximum width */
+    margin: auto; /* Center the div */
+}
+
+.headingLeft {
+    margin-left: auto;
+    margin-right: 30px;
+    align-content: center;
+    align-items: center;
+}
+
+.pictureRight {
+    margin-right: auto;
+}
+
+.pictureRight img {
+    border-radius: 5px;
+}
+

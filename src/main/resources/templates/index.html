@@ -5,12 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" th:href="@{/css/main.css}">
     <link rel="stylesheet" th:href="@{/css/styleFooter.css}">
+    <link rel="stylesheet" th:href="@{/css/styleIndex.css}">
 
     <title>Car Listing</title>
 </head>
 <body>
 
     <div th:replace="~{fragments/header :: headerFragment}" th:with="currentPage='index'"></div>
+
+    
+    <main>
+        <div class="mainDiv">
+
+            <div class="headingLeft">
+
+                <h1>Find Your Dream Car</h1>
+                <p>Browse our extensive collection of high-quality vehicles and find the perfect car for you.</p>
+
+                <div class="button-group">
+                    <button class="browseBTN">Browse Cars</button>
+                    <button class="learnMore">Learn More</button>
+                </div>
+
+            </div>
+
+            <div class="pictureRight">
+                <img src="https://picsum.photos/seed/car/660/444" alt="">
+            </div>
+
+        </div>
+
+    </main>
+
+
     <div th:replace="~{fragments/footer :: footerFragment}"></div>
     
 </body>
