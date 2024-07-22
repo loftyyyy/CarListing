@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @Controller
 public class CarController {
@@ -20,8 +21,6 @@ public class CarController {
     public CarController(CarService carService){
         this.carService = carService;
     }
-    private ArrayList<Car> CarList = new ArrayList<>();
-    //TODO: Implement Service DI to replace CarList array for a database.
 
     @GetMapping("/")
     public String home(Model model){
@@ -33,6 +32,7 @@ public class CarController {
     @GetMapping("/browse")
     public String browse(Model model){
         model.addAttribute("currentPage", "browse");
+        List<Car> CarList = carService.getAllCars();
         model.addAttribute("cars", CarList);
 
         return "browse";
@@ -66,7 +66,7 @@ public class CarController {
     ){
 
         Car newCar = new Car(year, price, registration, brand, model, description, color );
-        CarList.add(newCar);
+        carService.addCar(newCar);
 
         return "redirect:/sell";
     }

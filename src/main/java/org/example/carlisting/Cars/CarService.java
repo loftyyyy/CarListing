@@ -20,6 +20,10 @@ public class CarService {
         return carRepository.findAll();
     }
 
+    public void addCar(Car car){
+        carRepository.save(car);
+    }
+
 
 
 }
