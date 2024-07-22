@@ -5,12 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" th:href="@{/css/main.css}">
     <link rel="stylesheet" th:href="@{/css/styleFooter.css}">
+    <link rel="stylesheet" th:href="@{/css/styleBrowse.css}">
+
 
     <title>Car Listing</title>
 </head>
 <body>
 
 <div th:replace="~{fragments/header :: headerFragment}" th:with="currentPage='browse'"></div>
+<main>
+    <div class="topHeading">
+        <h1>Browse Our Car Collection</h1>
+        <p>Explore our wide range of high-quality vehicles, each with its own unique features and specifications.</p>
+    </div>
+
+</main>
 <div th:replace="~{fragments/footer :: footerFragment}"></div>
 
 </body>

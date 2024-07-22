@@ -1,0 +1,12 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.topHeading {
+    margin-top: 70px;
+    text-align: center;
+}
