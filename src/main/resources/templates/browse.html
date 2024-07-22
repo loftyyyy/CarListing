@@ -19,23 +19,25 @@
         <p>Explore our wide range of high-quality vehicles, each with its own unique features and specifications.</p>
     </div>
 
-<!--    <div class="card-container">-->
-<!--        <div class="card">-->
-<!--            <img src="image-placeholder.png" alt="Car Image">-->
-<!--            <div class="card-content">-->
-<!--                <h2>Toyota Camry</h2>-->
-<!--                <p>Reliable and comfortable sedan</p>-->
-<!--                <p class="price">$25,999</p>-->
-<!--            </div>-->
-<!--        </div>-->
-    <div class="card-container" id="card-container">
-        <!-- Existing cards will be here -->
+    <div class="card-container">
+        <div th:each="car : ${cars}" class="card">
+<!--            <img th:src="${card.imageUrl}" alt="Car Image">-->
+            <img src="https://picsum.photos/seed/picsum/200/300" alt="Car Image">
+            <div class="card-content">
+                <h2 th:text="${car.brand + ' ' + car.model}"></h2>
+                <p th:text="${car.description}"></p>
+                <p class="price" th:text="${car.price}"></p>
+                <p>Year: <span th:text="${car.carModelYear}"></span></p>
+                <p>Registration: <span th:text="${car.registrationNumber}"></span></p>
+                <p>Color: <span th:text="${car.color}"></span></p>
+            </div>
+        </div>
     </div>
-        <!-- Repeat for other cards -->
-<!--    </div>
 
 </main>
 <div th:replace="~{fragments/footer :: footerFragment}"></div>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script th:src="@{/js/cardGenerator.js}"></script>
 </body>
 </html>

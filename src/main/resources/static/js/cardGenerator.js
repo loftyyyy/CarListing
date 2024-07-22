@@ -1,3 +1,4 @@
+console.log("gwro");
 $(document).ready(function() {
     $('#add-card-btn').click(function() {
         $.ajax({

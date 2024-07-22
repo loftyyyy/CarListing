@@ -16,17 +16,17 @@ public class Car {
     private Long id;
 
     private int carModelYear;
-    private int price;
+    private String price;
     private String registrationNumber;
     private String brand;
     private String model;
     private String description;
-    private Color color;
+    private String color;
 
     public Car(){
 
     }
-    public Car(int carModelYear, int price, String registrationNumber, String brand, String model, String description, Color color) {
+    public Car(int carModelYear, String price, String registrationNumber, String brand, String model, String description, String color) {
         this.carModelYear = carModelYear;
         this.price = price;
         this.registrationNumber = registrationNumber;
@@ -44,11 +44,11 @@ public class Car {
         this.carModelYear = carModelYear;
     }
 
-    public int getPrice() {
+    public String getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(String price) {
         this.price = price;
     }
 
@@ -84,11 +84,11 @@ public class Car {
         this.description = description;
     }
 
-    public Color getColor() {
+    public String getColor() {
         return color;
     }
 
-    public void setColor(Color color) {
+    public void setColor(String color) {
         this.color = color;
     }
 

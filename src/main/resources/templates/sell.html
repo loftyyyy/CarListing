@@ -22,7 +22,7 @@
         </div>
         <div class="listingForms">
 
-            <form action="GET">
+            <form th:action="@{/addCar}" method="post">
 
                 <div class="form-group">
                     <label for="year">Year</label>
@@ -62,7 +62,7 @@
                 </div>
 
                 <div class="form-action">
-                    <button class="submit">List Car</button>
+                    <button type="submit" class="submit">List Car</button>
                 </div>
                 
             </form>
