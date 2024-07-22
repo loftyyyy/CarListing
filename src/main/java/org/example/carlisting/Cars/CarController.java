@@ -1,5 +1,6 @@
 package org.example.carlisting.Cars;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
 import org.springframework.stereotype.Controller;
@@ -13,7 +14,14 @@ import java.util.ArrayList;
 @Controller
 public class CarController {
 
+    private final CarService carService;
+
+    @Autowired
+    public CarController(CarService carService){
+        this.carService = carService;
+    }
     private ArrayList<Car> CarList = new ArrayList<>();
+    //TODO: Implement Service DI to replace CarList array for a database.
 
     @GetMapping("/")
     public String home(Model model){
