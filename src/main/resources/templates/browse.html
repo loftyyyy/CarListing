@@ -24,12 +24,12 @@
 <!--            <img th:src="${card.imageUrl}" alt="Car Image">-->
             <img src="https://picsum.photos/seed/picsum/200/300" alt="Car Image">
             <div class="card-content">
-                <h2 th:text="${car.brand + ' ' + car.model}"></h2>
-                <p th:text="${car.description}"></p>
+                <h2 th:text="${car.brand + ' ' + car.model}" class="brand-model-text"></h2>
+                <p th:text="${car.description}" class="text-description"></p>
                 <p class="price" th:text="${car.price}"></p>
-                <p>Year: <span th:text="${car.carModelYear}"></span></p>
-                <p>Registration: <span th:text="${car.registrationNumber}"></span></p>
-                <p>Color: <span th:text="${car.color}"></span></p>
+<!--                <p>Year: <span th:text="${car.carModelYear}"></span></p>-->
+<!--                <p>Registration: <span th:text="${car.registrationNumber}"></span></p>-->
+<!--                <p>Color: <span th:text="${car.color}"></span></p>-->
             </div>
         </div>
     </div>

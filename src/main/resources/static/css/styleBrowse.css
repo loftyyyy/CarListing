@@ -18,7 +18,9 @@ main {
     text-align: center;
 }
 
+
 .card-container {
+    margin-top: 40px;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -62,4 +64,8 @@ main {
 
 .card:hover {
     transform: scale(1.05);
+}
+
+.text-description {
+    margin-top: 0;
 }
