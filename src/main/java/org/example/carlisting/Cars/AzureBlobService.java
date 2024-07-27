@@ -1,12 +1,11 @@
 package org.example.carlisting.Cars;
 
-import com.azure.storage.blob.BlobClient;
-import com.azure.storage.blob.BlobClientBuilder;
-import com.azure.storage.blob.BlobContainerClient;
+import com.azure.storage.blob.*;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
+import java.util.Objects;
 
 @Service
 public class AzureBlobService {
@@ -16,14 +15,18 @@ public class AzureBlobService {
 
 
     private BlobContainerClient getBlobContainerClient(){
-        return new BlobClientBuilder().connectionString(connectStr).containerName(containerName).buildClient().getContainerClient();
-    }
+        BlobServiceClient blobServiceClient = new BlobServiceClientBuilder().connectionString(connectStr).buildClient();
+        return blobServiceClient.getBlobContainerClient(containerName);    }
 
     public String uploadImage(MultipartFile file) throws IOException {
-        BlobClient blobClient = getBlobContainerClient().getBlobClient(file.getOriginalFilename());
+        String originalFilename = Objects.requireNonNullElse(file.getOriginalFilename(), "default-filename");
+
+        // Optionally, sanitize the filename to remove any special characters
+        String sanitizedFilename = originalFilename.replaceAll("[^a-zA-Z0-9-_\\.]", "_");
+
+        BlobClient blobClient = getBlobContainerClient().getBlobClient(sanitizedFilename);
         blobClient.upload(file.getInputStream(), file.getSize(), true);
         return blobClient.getBlobUrl();
-
     }
 
 

@@ -72,9 +72,14 @@ public class CarController {
     ) throws IOException {
 
         //TODO: Add an intervention here wherein img is uploaded to the azure and get the url and put that url in the car database
-        String imageUrl = azureBlobService.uploadImage(img);
-        Car newCar = new Car(year, price, registration, brand, model, description, color, imageUrl );
-        carService.addCar(newCar);
+        if(!img.isEmpty()){
+            String imageUrl = azureBlobService.uploadImage(img);
+            Car newCar = new Car(year, price, registration, brand, model, description, color, imageUrl );
+            carService.addCar(newCar);
+        }else{
+            System.out.println("Image empty");
+        }
+
 
         return "redirect:/sell";
     }
