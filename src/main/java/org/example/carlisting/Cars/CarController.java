@@ -8,7 +8,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,10 +19,13 @@ import java.util.List;
 public class CarController {
 
     private final CarService carService;
+    private final AzureBlobService azureBlobService;
 
     @Autowired
-    public CarController(CarService carService){
+    public CarController(CarService carService, AzureBlobService azureBlobService
+    ){
         this.carService = carService;
+        this.azureBlobService = azureBlobService;
     }
 
     @GetMapping("/")
@@ -62,10 +68,12 @@ public class CarController {
             @RequestParam int year, @RequestParam String registration,
             @RequestParam String price, @RequestParam String brand,
             @RequestParam String model, @RequestParam String color,
-            @RequestParam String description
-    ){
+            @RequestParam String description, @RequestParam MultipartFile img
+    ) throws IOException {
 
-        Car newCar = new Car(year, price, registration, brand, model, description, color );
+        //TODO: Add an intervention here wherein img is uploaded to the azure and get the url and put that url in the car database
+        String imageUrl = azureBlobService.uploadImage(img);
+        Car newCar = new Car(year, price, registration, brand, model, description, color, imageUrl );
         carService.addCar(newCar);
 
         return "redirect:/sell";

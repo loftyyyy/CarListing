@@ -21,8 +21,8 @@
 
     <div class="card-container">
         <div th:each="car : ${cars}" class="card">
-<!--            <img th:src="${card.imageUrl}" alt="Car Image">-->
-            <img src="https://picsum.photos/seed/picsum/200/300" alt="Car Image">
+            <img th:src="${car.carImageUrl}" alt="Car Image">
+<!--            <img src="https://picsum.photos/seed/picsum/200/300" alt="Car Image">-->
             <div class="card-content">
                 <h2 th:text="${car.brand + ' ' + car.model}" class="brand-model-text"></h2>
                 <p th:text="${car.description}" class="text-description"></p>

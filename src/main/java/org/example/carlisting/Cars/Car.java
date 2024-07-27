@@ -23,10 +23,12 @@ public class Car {
     private String description;
     private String color;
 
+    private String carImageUrl;
+
     public Car(){
 
     }
-    public Car(int carModelYear, String price, String registrationNumber, String brand, String model, String description, String color) {
+    public Car(int carModelYear, String price, String registrationNumber, String brand, String model, String description, String color, String carImageUrl) {
         this.carModelYear = carModelYear;
         this.price = price;
         this.registrationNumber = registrationNumber;
@@ -34,6 +36,15 @@ public class Car {
         this.model = model;
         this.description = description;
         this.color = color;
+        this.carImageUrl = carImageUrl;
+    }
+
+    public String getCarImageUrl() {
+        return carImageUrl;
+    }
+
+    public void setCarImageUrl(String carImageUrl) {
+        this.carImageUrl = carImageUrl;
     }
 
     public int getCarModelYear() {
