@@ -1,6 +1,8 @@
-# 🚗 Car Listing Website
+# 🚗 Car Listing Website (Work in Progress)
 
 Welcome to the Car Listing Website! This web application is built using **Java**, **Spring Boot**, and **Thymeleaf**, and allows users to browse available cars or sell their cars online. It offers a seamless experience for both car buyers and sellers, with an intuitive interface and integration with **PostgreSQL** and **Microsoft Azure** for efficient data and image handling.
+
+⚠️ _**Note:** This project is still a work in progress. Some features and pages are still under development._
 
 ## 🚀 Features
 
@@ -26,13 +28,15 @@ Welcome to the Car Listing Website! This web application is built using **Java**
         - Description
     - ![Sell Your Car Page](path-to-your-sellyourcar-screenshot)
 
-4. **About**
-    - A page that provides background information about the company.
+4. **About** _(Work in Progress)_
+    - This page will provide background information about the company.
     - ![About Page](path-to-your-about-screenshot)
+    - _Note: This page is still under development and will be completed soon._
 
-5. **Contact**
-    - A contact form where users can reach out to the company with inquiries.
+5. **Contact** _(Work in Progress)_
+    - This page will feature a contact form where users can reach out to the company with inquiries.
     - ![Contact Page](path-to-your-contact-screenshot)
+    - _Note: This page is still under development and will be completed soon._
 
 ## 🛠️ Tech Stack
 
@@ -85,8 +89,8 @@ Check out the live version of the website here: [Your Website URL]
 | Home          | ![Home Page](path-to-your-homepage-screenshot)                   |
 | Browse Cars   | ![Browse Cars Page](path-to-your-browsecars-screenshot)          |
 | Sell Your Car | ![Sell Your Car Form](path-to-your-sellyourcar-screenshot)       |
-| About         | ![About Page](path-to-your-about-screenshot)                     |
-| Contact       | ![Contact Page](path-to-your-contact-screenshot)                 |
+| About         | ![About Page](path-to-your-about-screenshot) _(Work in Progress)_|
+| Contact       | ![Contact Page](path-to-your-contact-screenshot) _(Work in Progress)_|
 
 ## 💡 How to Run Locally
 
@@ -109,6 +113,7 @@ Check out the live version of the website here: [Your Website URL]
 
 ## 🚀 Future Enhancements
 
+- Complete the **About Us** and **Contact** pages.
 - Implement advanced filtering options for car searches (e.g., mileage, fuel type).
 - Add user authentication for sellers.
 - Introduce payment gateway integration for buyers.
