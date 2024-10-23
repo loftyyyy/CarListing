@@ -10,10 +10,12 @@ Welcome to the Car Listing Website! This web application is built using **Java**
 
 2. **Browse Cars**
     - Clients can browse through a list of cars for sale with various filtering options like brand, model, price, and year.
+    - New car listings submitted through the "Sell Your Car" form are automatically added to the "Browse Cars" page.
     - ![Browse Cars Page](path-to-your-browsecars-screenshot)
 
 3. **Sell Your Car**
-    - Clients can easily sell their cars by filling out a simple form. The information collected includes:
+    - Clients can easily sell their cars by filling out a simple form. Once the form is submitted, the car is listed on the **Browse Cars** page for potential buyers to view.
+    - The information collected includes:
         - Year
         - Registration
         - Price
@@ -44,7 +46,7 @@ Welcome to the Car Listing Website! This web application is built using **Java**
 
 ## 📋 Sell Your Car Form Details
 
-The "Sell Your Car" page allows users to list their car for sale. It collects the following details:
+The "Sell Your Car" page allows users to list their car for sale. Once the form is submitted, the car is immediately available on the **Browse Cars** page for potential buyers to see. It collects the following details:
 
 - **Year**: The year the car was manufactured.
 - **Registration**: Vehicle registration number.
