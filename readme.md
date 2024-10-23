@@ -9,7 +9,7 @@ Welcome to the Car Listing Website! This web application is built using **Java**
 1. **Home**
     - A welcoming homepage with an overview of the website’s purpose.
     - ![Home Page](https://github.com/user-attachments/assets/9c0558e5-c53d-48f1-ac5f-62b93b8c12ef)
-)
+
 
 2. **Browse Cars**
     - Clients can browse through a list of cars for sale with various filtering options like brand, model, price, and year.
@@ -66,7 +66,7 @@ The "Sell Your Car" page allows users to list their car for sale. Once the form 
 - **Description**: A short description of the car’s features.
 
 Here’s a preview of the form:
-![Sell Your Car Form](path-to-your-form-screenshot)
+![Sell Your Car Form](https://github.com/user-attachments/assets/a6a1f2ec-30fd-4091-aa1e-b47110d8d8ba)
 
 ## 💾 Database Schema
 
@@ -84,7 +84,7 @@ The data collected in the "Sell Your Car" form is stored in a **PostgreSQL** dat
 
 ## 🌐 Live Demo
 
-Check out the live version of the website here: [Your Website URL]
+Check out the live version of the website here: (Coming Soon)
 
 ## 📸 Screenshots
 
