@@ -96,12 +96,12 @@ Check out the live version of the website here: [Your Website URL]
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/your-username/your-repo-name.git
+    git clone https://github.com/loftyyyy/CarListing.git
     ```
 
 2. Navigate to the project directory:
     ```bash
-    cd your-repo-name
+    cd CarListing
     ```
 
 3. Install dependencies and run the application:
