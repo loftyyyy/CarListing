@@ -26,7 +26,7 @@
             <div class="card-content">
                 <h2 th:text="${car.brand + ' ' + car.model}" class="brand-model-text"></h2>
                 <p th:text="${car.description}" class="text-description"></p>
-                <p class="price" th:text="${car.price}"></p>
+                <p class="price" th:text="${'₱' + car.price}"></p>
             </div>
         </div>
     </div>
