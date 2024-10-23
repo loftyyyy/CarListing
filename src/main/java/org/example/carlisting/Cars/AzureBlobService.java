@@ -1,17 +1,28 @@
 package org.example.carlisting.Cars;
 
 import com.azure.storage.blob.*;
+import groovy.transform.AutoClone;
+import io.github.cdimascio.dotenv.Dotenv;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 import java.util.Objects;
 
+
 @Service
 public class AzureBlobService {
+    private Dotenv dotenv;
+    @Autowired
+    public AzureBlobService(Dotenv dotenv) {
+        this.dotenv = dotenv;
+    }
 
-    private final String connectStr = "DefaultEndpointsProtocol=https;AccountName=imagestoragez;AccountKey=OIfXrUWnbXkQVV18Isf09Ft9hJhcPJ0sovQb36OE2bqnU7U+s8GEq4sxFjmVyfyCGZKUPrfD9UHc+ASt64bo3w==;EndpointSuffix=core.windows.net";
+
+    private final String connectStr = dotenv.get("API_KEY");
     private final String containerName = "image-containerz";
+
 
 
     private BlobContainerClient getBlobContainerClient(){
