@@ -20,7 +20,7 @@ public class AzureBlobService {
     }
 
 
-    private final String connectStr = dotenv.get("API_KEY");
+    private final String connectStr = "";
     private final String containerName = "image-containerz";
 
 
