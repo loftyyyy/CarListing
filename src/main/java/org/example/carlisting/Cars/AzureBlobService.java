@@ -21,6 +21,7 @@ public class AzureBlobService {
 
 
     private final String connectStr = "";
+
     private final String containerName = "image-containerz";
 
 
