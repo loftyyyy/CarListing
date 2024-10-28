@@ -13,12 +13,6 @@ import java.util.Objects;
 
 @Service
 public class AzureBlobService {
-    private Dotenv dotenv;
-    @Autowired
-    public AzureBlobService(Dotenv dotenv) {
-        this.dotenv = dotenv;
-    }
-
 
     private final String connectStr = "";
 
