@@ -4,6 +4,7 @@ import com.azure.storage.blob.*;
 import groovy.transform.AutoClone;
 import io.github.cdimascio.dotenv.Dotenv;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -14,9 +15,11 @@ import java.util.Objects;
 @Service
 public class AzureBlobService {
 
-    private final String connectStr = "";
+    @Value("${secret.connectStr}")
+    private String connectStr;
 
-    private final String containerName = "image-containerz";
+    @Value("${secret.containerName}")
+    private String containerName;
 
 
 
