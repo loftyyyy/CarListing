@@ -81,6 +81,7 @@ The data collected in the "Sell Your Car" form is stored in a **PostgreSQL** dat
 - `color`
 - `image_url` (Stored in Microsoft Azure)
 - `description`
+-
 
 ## 🌐 Live Demo
 
